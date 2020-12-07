@@ -1,0 +1,125 @@
+@use 'mixins' as mix;
+@use 'palette' as pal;
+nav {
+  @include mix.flex;
+  width: 100%;
+  height: 13.8%;
+  transition: all 0.2s;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.innerNav {
+  width: 71.9vw;
+  @include mix.flex(row, space-between, center);
+}
+
+.logoWrapper {
+  width: 200px;
+  height: 100px;
+}
+
+.navigationItems li {
+  max-width: 90%;
+  text-align: center;
+  font-size: max(15px, 3vw);
+  margin-top: min(8vh, 80px);
+  padding: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  & a {color: pal.$hotGreen;}
+}
+
+.social {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.navigationItems {
+  position: absolute;
+  top: 0;
+  z-index: 49;
+  height: 100vh;
+  right: -600px;
+  width: 50%;
+  background: white;
+  @include mix.flex(column, center, center);
+  transition: right 0.3s;
+  box-shadow: 3px 3px 10px lightgrey;
+}
+
+.showNav {
+  right: 0;
+}
+
+.showNav + .hamburger:after {
+  content: "⨉";
+}
+
+.hamburger {
+  position: relative;
+  background: none;
+  outline: none;
+  border: none;
+  height: 30px;
+  width: 30px;
+}
+
+.hamburger:after {
+  display: block;
+  top: 0;
+  left:0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  z-index: 50;
+  position: absolute;
+  content: "☰";
+  font-size: max(25px, 1.5vw);
+  cursor: pointer;
+}
+
+.navHover {
+  position: fixed;
+  background: white;
+}
+
+.mobile {
+  display: block;
+}
+
+
+@media only screen and (min-width: 1140px) {
+
+  .navigationItems {
+      position: relative;
+      top: 0;
+      height: auto;
+      display: block;
+      width: auto;
+      right: 0;
+      visibility: visible;
+      background: none;
+      padding: 0;
+      box-shadow: none;
+  }
+
+  .navigationItems li {
+    display: inline;
+    margin-left: 3.7vw;
+    font-size: max(14px, 0.9vw);
+  }
+
+  .social {
+    width: 20px;
+    height: 20px;
+  }
+
+  .mobile {
+      display: none;
+  }
+}

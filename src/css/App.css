@@ -1,3 +1,11 @@
+.App {
+  background: grey;
+  overflow-y: scroll;
+}
 
+section {
+  height: 100vh;
+  border-bottom: 1px solid black;
+}
 
 /*# sourceMappingURL=App.css.map */
