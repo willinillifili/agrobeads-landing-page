@@ -119,12 +119,12 @@ ul {
   .navigationItems li {
     display: inline;
     margin-left: 3.7vw;
-    font-size: max(14px, 0.9vw);
+    font-size: max(14px, 0.7vw);
   }
 
   .social {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
   }
 
   .mobile {

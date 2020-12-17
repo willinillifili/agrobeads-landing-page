@@ -1,3 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+li, a, h1, h2, p, div, span {
+  font-family: "Montserrat", sans-serif;
+}
 
+.heroImage {
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 75%;
+}
+.heroImage img {
+  height: 120%;
+  object-fit: cover;
+}
+
+.heroTextElement {
+  margin-bottom: 40px;
+  color: #043B2E;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+#heroTextSection {
+  width: 35.6vw;
+  height: 40.5vh;
+  margin-top: 6.25%;
+  margin-left: 13.73vw;
+  max-width: 25%;
+}
+
+.heroText {
+  font-size: max(45px, 4vw);
+}
+
+.heroSub {
+  font-size: max(1.75vw, 25px);
+  font-family: "Josefin Sans", sans-serif;
+  min-width: 300px;
+}
+
+.cta {
+  text-transform: uppercase;
+  color: white;
+  background: #C2A62B;
+  border: none;
+  width: 90%;
+  padding: 20px;
+  font-size: max(1.5vw, 15px);
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=Home.css.map */
