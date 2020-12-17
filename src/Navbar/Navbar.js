@@ -6,7 +6,9 @@ const Navbar = (props) => {
   const menuItemsView = menuItems.map((item, key) => {
     return (
       <li key={key}>
-        <a href={item.bookmark}>{item.title}</a>
+        <a href={item.bookmark} id={item.bookmark}
+           onClick={(e) => props.onLinkClick(e)}>
+        {item.title}</a>
       </li>
     );
   });
@@ -24,14 +26,14 @@ const Navbar = (props) => {
   return (
     <nav>
       <div class="innerNav">
-        <span className="logoWrapper">
+        <a href="#top" className="logoWrapper">
             <img attr="agrobeads logo" src={logo}/>
-        </span>
+        </a>
         <ul className="navigationItems">
           { menuItemsView }
           { socialView }
         </ul>
-        <button onClick={() => props.onClick()} className="hamburger mobile">
+        <button onClick={() => props.onBurgerClick()} className="hamburger mobile">
         </button>
       </div>
     </nav>

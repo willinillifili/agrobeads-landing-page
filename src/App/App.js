@@ -23,9 +23,10 @@ class App extends React.Component {
     const navPanel = document.querySelector('.navigationItems');
     const app = document.querySelector('.App');
     const navHoverBreakPoint = document.querySelector('section:nth-child(3)')
-                                       .offsetTop - navbar.offsetHeight;
+                                       .offsetTop - navbar.offsetHeight - 100;
     this.setState({
       app : app,
+      scrollTop : app.scrollTop,
       navbar : navbar,
       navPanel : navPanel,
       navHoverBreakPoint : navHoverBreakPoint
@@ -44,14 +45,17 @@ class App extends React.Component {
 
   /**
     Scrolls the screen to the section that was selected in the navbar.
-    @param {Event} e Is an event of type 'click'
+    @param {Event} e An event of type 'click'
   */
 
   handleNavClick(e) {
     e.preventDefault();
-    const sectionID = e.srcElement.id;
-    const sectionPosition = document.querySelector(sectionID).scrollTop;
-    window.scrollTop = sectionPosition;
+    /* the id string of the element to which we navigate will be in the
+       href of the clicked anchor */
+    const sectionID = e.target.id;
+    const sectionPosition = sectionID == "#home"
+    ? this.state.navbar.offsetHeight : document.querySelector(sectionID).offsetTop;
+    this.state.app.scrollTop = sectionPosition - this.state.navbar.offsetHeight;
   }
 
   handleScroll() {
@@ -76,7 +80,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" onScroll={ () => this.handleScroll() }>
-        <Navbar onClick={() => this.handleShowNav(this.state.navPanel)}/>
+        <Navbar onBurgerClick={() => this.handleShowNav(this.state.navPanel)}
+                onLinkClick={(e) => this.handleNavClick(e)}/>
         <Home />
         <Team />
         <Product />
