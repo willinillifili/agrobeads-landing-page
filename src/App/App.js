@@ -23,7 +23,7 @@ class App extends React.Component {
     const navPanel = document.querySelector('.navigationItems');
     const app = document.querySelector('.App');
     const navHoverBreakPoint = document.querySelector('section:nth-child(3)')
-                                       .offsetTop - navbar.offsetHeight - 100;
+                                       .offsetTop - navbar.offsetHeight - 200;
     this.setState({
       app : app,
       scrollTop : app.scrollTop,
