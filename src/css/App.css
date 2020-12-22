@@ -10,6 +10,10 @@ section {
 section:not(#home) {
   background: white;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 section:not(#home)::after {
@@ -17,7 +21,7 @@ section:not(#home)::after {
   content: "";
   position: absolute;
   z-index: 2;
-  top: 60%;
+  top: 70%;
   right: 93%;
   width: 200px;
   height: 200px;
@@ -31,13 +35,24 @@ section:not(#home)::before {
   content: "";
   position: absolute;
   z-index: 2;
-  bottom: 60%;
+  bottom: 75%;
   left: 93%;
   width: 200px;
   height: 200px;
   background-image: url("../assets/agrobeads_drop.png");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 1700px) {
+  section:not(#home) {
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

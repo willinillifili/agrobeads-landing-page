@@ -1,11 +1,136 @@
+.brown-icon-separator {
+  height: 50px !important;
+}
+
+.team-section {
+  height: 33%;
+  max-width: 71.9vw;
+}
+
 .team-photo {
-  width: 500px;
-  height: 500px;
+  width: 250px;
+  height: 250px;
+  filter: brightness(60%);
 }
 
 .ceo-photo {
-  width: 415px;
-  height: 415px;
+  position: relative;
+  width: 180px;
+  height: 180px;
+  z-index: 40;
+  bottom: 150px;
+  left: 100px;
+}
+
+.team-photo img, .ceo-photo img {
+  border-radius: 1000px;
+}
+
+.about-the-team {
+  font-size: 12px;
+  margin-top: 30px;
+}
+.about-the-team h2 {
+  text-transform: capitalize;
+  font-size: 24px;
+}
+
+@media only screen and (min-width: 500px) {
+  .brown-icon-separator {
+    height: unset;
+  }
+
+  .about-the-team {
+    font-size: 17px;
+    margin-top: 100px;
+  }
+  .about-the-team h2 {
+    text-transform: capitalize;
+    font-size: 34px;
+  }
+
+  .team-photo {
+    width: 350px;
+    height: 350px;
+    filter: brightness(60%);
+  }
+
+  .ceo-photo {
+    position: relative;
+    width: 208px;
+    height: 208px;
+    z-index: 40;
+    bottom: 150px;
+    left: 150px;
+  }
+}
+@media only screen and (min-width: 1250px) {
+  #team {
+    flex-direction: row !important;
+  }
+
+  .team-section {
+    width: 33%;
+    height: 80%;
+  }
+
+  .team-photo {
+    width: 450px;
+    height: 450px;
+    filter: brightness(60%);
+  }
+
+  .ceo-photo {
+    position: relative;
+    width: 315px;
+    height: 315px;
+    z-index: 40;
+    bottom: 200px;
+    left: 210px;
+  }
+
+  .team-photo img, .ceo-photo img {
+    border-radius: 1000px;
+  }
+
+  .about-the-team {
+    font-size: 19px;
+    margin-left: 10%;
+  }
+  .about-the-team h2 {
+    text-transform: capitalize;
+    font-size: 38px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .team-section {
+    width: 33%;
+    height: 80%;
+  }
+
+  .team-photo {
+    width: 500px;
+    height: 500px;
+    filter: brightness(60%);
+  }
+
+  .ceo-photo {
+    position: relative;
+    width: 415px;
+    height: 415px;
+    z-index: 40;
+    bottom: 300px;
+    left: 170px;
+  }
+
+  .about-the-team {
+    font-size: 24px;
+    margin-left: 5%;
+  }
+  .about-the-team h2 {
+    text-transform: capitalize;
+    font-size: 48px;
+  }
 }
 
 /*# sourceMappingURL=Team.css.map */

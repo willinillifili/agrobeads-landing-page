@@ -19,5 +19,7 @@ a {
 }
 
 .brown-icon-separator {
-  background-image: url('assets/agrobeads_earth.png'); 
+  background: url('assets/agrobeads_earth.png') no-repeat;
+  height: 128px;
+  background-size: contain;
 }

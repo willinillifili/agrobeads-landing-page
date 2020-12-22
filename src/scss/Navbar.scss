@@ -1,5 +1,6 @@
 @use 'mixins' as mix;
 @use 'palette' as pal;
+
 nav {
   @include mix.flex;
   width: 100%;
@@ -87,6 +88,7 @@ ul {
   position: fixed;
   z-index: 500;
   background: white;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);  
 }
 
 .mobile {
