@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   position: absolute;
-  width: 100%;
+  width: 160%;
   height: 100%;
   overflow: hidden;
   & img {
@@ -37,7 +37,7 @@
 .heroSub {
   font-size: max(1.75vw, 25px);
   font-family: 'Josefin Sans', sans-serif;
-  min-width: 300px;
+  min-width: 140px;
 }
 
 .cta {
@@ -46,11 +46,14 @@
   background: #F8D230;//#C56161;
   border: none;
   width: 90%;
+  min-width: 200px;
   padding: 20px;
   font-size: max(1.5vw, 15px);
   cursor: pointer;
 }
 
 @media only screen and (min-width: 700px) {
-
+  .heroImage {
+    width: 100%;
+  }
 }

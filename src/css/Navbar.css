@@ -22,7 +22,7 @@ ul {
 }
 
 .logoWrapper {
-  width: 200px;
+  width: 170px;
   height: 100px;
 }
 
@@ -131,6 +131,11 @@ ul {
 
   .mobile {
     display: none;
+  }
+
+  .logoWrapper {
+    width: 200px;
+    height: 100px;
   }
 }
 

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"Blog.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/Blog.scss"],"names":[],"mappings":"AAAA;EACE;;;AAGF;EACE;IAAK;;;EACL;IAAG","file":"Blog.css"}
