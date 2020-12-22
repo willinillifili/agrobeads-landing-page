@@ -23,3 +23,9 @@ a {
   height: 128px;
   background-size: contain;
 }
+
+h2 { text-transform: capitalize;}
+
+p, h2 {
+  color: #043B2E;
+}
