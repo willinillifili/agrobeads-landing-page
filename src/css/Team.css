@@ -1,5 +1,11 @@
-#team {
-  background: grey;
+.team-photo {
+  width: 500px;
+  height: 500px;
+}
+
+.ceo-photo {
+  width: 415px;
+  height: 415px;
 }
 
 /*# sourceMappingURL=Team.css.map */

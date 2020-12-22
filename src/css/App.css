@@ -9,6 +9,35 @@ section {
 
 section:not(#home) {
   background: white;
+  position: relative;
+}
+
+section:not(#home)::after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 60%;
+  right: 93%;
+  width: 200px;
+  height: 200px;
+  background-image: url("../assets/agrobeads_leaf.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+section:not(#home)::before {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 2;
+  bottom: 60%;
+  left: 93%;
+  width: 200px;
+  height: 200px;
+  background-image: url("../assets/agrobeads_drop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=App.css.map */

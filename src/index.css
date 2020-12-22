@@ -17,3 +17,7 @@ img {
 a {
   text-decoration: none;
 }
+
+.brown-icon-separator {
+  background-image: url('assets/agrobeads_earth.png'); 
+}
