@@ -52,7 +52,8 @@ class App extends React.Component {
     e.preventDefault();
     /* the id string of the element to which we navigate will be in the
        href of the clicked anchor */
-    const sectionID = e.target.id;
+    let sectionID = e.target.className;
+    if (e.target.nodeName == "BUTTON") sectionID = "#product";
     const sectionPosition = sectionID == "#home"
     ? this.state.navbar.offsetHeight : document.querySelector(sectionID).offsetTop;
     this.state.app.scrollTop = sectionPosition - this.state.navbar.offsetHeight;
@@ -82,7 +83,7 @@ class App extends React.Component {
       <div className="App" onScroll={ () => this.handleScroll() }>
         <Navbar onBurgerClick={() => this.handleShowNav(this.state.navPanel)}
                 onLinkClick={(e) => this.handleNavClick(e)}/>
-        <Home />
+        <Home onCtaClick={(e) => this.handleNavClick(e)}/>
         <Team />
         <Product />
         <Blog />

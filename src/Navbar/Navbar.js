@@ -6,7 +6,7 @@ const Navbar = (props) => {
   const menuItemsView = menuItems.map((item, key) => {
     return (
       <li key={key}>
-        <a href={item.bookmark} id={item.bookmark}
+        <a href={item.bookmark} class={item.bookmark}
            onClick={(e) => props.onLinkClick(e)}>
         {item.title}</a>
       </li>

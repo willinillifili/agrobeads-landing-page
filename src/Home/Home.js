@@ -1,6 +1,7 @@
 import home from '../css/Home.css';
 import hero from '../assets/hero.png';
-function Home() {
+
+function Home(props) {
   return(
     <section id="home">
       <div id="heroTextSection">
@@ -13,7 +14,9 @@ function Home() {
         <div className="heroTextElement heroSub">
           All natural solution that satisfies your plant's needs.
         </div>
-        <button type="button" className="heroTextElement cta">
+        <button type="button"
+                className="heroTextElement cta"
+                onClick={(e) => props.onCtaClick(e)}>
           learn more
         </button>
       </div>
