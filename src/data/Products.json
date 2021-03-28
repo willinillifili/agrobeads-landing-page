@@ -1,0 +1,20 @@
+[
+  {
+    "name": "just water",
+    "catch_phrase" : "Your plant Nanny.",
+    "description" : "Enjoy your vacations. This Agrobeads will water your plants for two weeks.",
+    "image" : "./assets/images/agrobeads_product.jpg"
+  },
+  {
+    "name": "all-natural",
+    "catch_phrase" : "Greener Plants.",
+    "description" : "Give your seeds or plant roots a boost; these beads are charged with nutrients.",
+    "image" : "./assets/images/agrobeads_product.jpg"
+  },
+  {
+    "name": "organic",
+    "catch_phrase" : "Conscious choice.",
+    "description" : "You want to grow your own food? Organic may be the way to go. It is up to you.",
+    "image" : "./assets/images/agrobeads_product.jpg"
+  }
+]

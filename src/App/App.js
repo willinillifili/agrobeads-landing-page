@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../Navbar/Navbar';
 import Home from '../Home/Home';
 import Team from '../Team/Team';
-import Product from '../Product/Product';
+import Products from '../Products/Products';
 import Blog from '../Blog/Blog';
 import app from '../css/App.css';
 
@@ -85,7 +85,7 @@ class App extends React.Component {
                 onLinkClick={(e) => this.handleNavClick(e)}/>
         <Home onCtaClick={(e) => this.handleNavClick(e)}/>
         <Team />
-        <Product />
+        <Products />
         <Blog />
       </div>
     );

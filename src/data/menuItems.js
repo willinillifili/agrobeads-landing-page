@@ -11,8 +11,8 @@ const menuItems = [
     bookmark : "#team"
   },
   {
-    title : "product",
-    bookmark : "#product"
+    title : "products",
+    bookmark : "#products"
   },
   {
     title : "blogs & resources",

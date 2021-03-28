@@ -1,0 +1,142 @@
+@use 'mixins' as mix;
+@use 'palette' as pal;
+
+.products-container {
+  @include mix.flex();
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0px 10px;
+  max-width: 561px;
+  width: 100%;
+}
+
+.brown-icon-separator {
+  width : 50px;
+}
+
+section#products::before {
+  z-index : -1 !important;
+}
+
+.product-container {
+  width : 45%;
+  max-width: 238px;
+  @include mix.flex(column);
+  margin-bottom: 20px;
+}
+
+.product-container:last-of-type {
+  //margin-bottom: 40px;
+}
+
+.product-text {
+  text-align: center;
+  font-size: 85%;
+}
+
+.circle {
+  border-radius: 1000px;
+}
+
+aside {
+  width: 45%;
+  position: absolute;
+  bottom: 12%;
+  right: -10px;
+  background: pal.$yellow;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px;
+}
+
+aside .product-image {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 125px;
+  height: 125px;
+}
+
+aside .product-text {
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+aside img {
+  border: 10px solid white;
+}
+
+// the aside starts looking bad at this point
+@media only screen and (min-width : 550px) {
+  aside {
+    justify-content: center;
+  }
+
+  aside .product-text {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (min-width : 800px) {
+
+  section#products::before {
+    z-index : 2 !important;
+  }
+
+  .products-container{
+    max-width: 870px;
+  }
+
+  .products-container p {
+    font-size: 125%;
+  }
+
+  .products-container h2 {
+    font-size: 200%;
+  }
+
+  aside {
+      bottom: 2%;
+      height: 15%;
+      justify-content: center;
+      align-items: center;
+  }
+
+  aside .product-image {
+    left: -20%;
+    top: -35%;
+  }
+
+  aside p {
+    font-size: 120%;
+  }
+
+  aside .product-text {
+    margin-top: 0px;
+    margin-right: 10px;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width : 1200px) {
+  aside {
+    width: 33%;
+  }
+}
+
+@media only screen and (min-width : 1700px) {
+  section#products {
+    flex-direction: column !important;
+  }
+
+  aside  { width : 25% }
+
+  aside .product-image {
+    width: 150px;
+    height: 150px;
+  }
+}
