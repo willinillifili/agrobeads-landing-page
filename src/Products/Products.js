@@ -7,7 +7,7 @@ function Product({ info }) {
   return(
     <>
       <div className="product-image">
-        <img src={image} alt={name} className="circle"/>
+        <img src={image} alt={name}/>
       </div>
       <div className="product-text">
         <h2>{name}</h2>
@@ -23,7 +23,7 @@ function Product({ info }) {
 function Products() {
   return (
     <section id="products">
-      <h2>Our Product</h2>
+      <h2>Our Products</h2>
       <div className="brown-icon-separator"></div>
       <div className="products-container">
       {products.map( (product, key) => {

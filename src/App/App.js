@@ -53,7 +53,7 @@ class App extends React.Component {
     /* the id string of the element to which we navigate will be in the
        href of the clicked anchor */
     let sectionID = e.target.className;
-    if (e.target.nodeName == "BUTTON") sectionID = "#product";
+    if (e.target.nodeName == "BUTTON") sectionID = "#products";
     const sectionPosition = sectionID == "#home"
     ? this.state.navbar.offsetHeight : document.querySelector(sectionID).offsetTop;
     this.state.app.scrollTop = sectionPosition - this.state.navbar.offsetHeight;
